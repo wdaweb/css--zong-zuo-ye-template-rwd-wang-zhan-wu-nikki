@@ -1,0 +1,25 @@
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu {
+  background-color: #000;
+  height: 56px;
+}
+.menu ul li {
+  display: inline-block;
+  vertical-align: middle;
+}
+.menu ul li img {
+  height: 40px;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.menu ul .btn {
+  padding: 15px 10px;
+  font-size: 15px;
+}
