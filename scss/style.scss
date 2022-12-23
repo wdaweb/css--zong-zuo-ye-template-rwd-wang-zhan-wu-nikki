@@ -1,19 +1,25 @@
-.container{
-
-}
-.flex-container{
+.flex{
   display: flex;
 }
+li{
+  list-style: none;
+}
+@media (min-width:992px) {
+  #nav{
+  background: #000;
 
-.menu{
-  background-color: #000;
+}
+.nav{
+  width: 90vw;
 height: 56px;
-
-  ul{
-
-    li{
-      display: inline-block;
-      vertical-align: middle;
+margin: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+ul{
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
 
       img{
       height: 40px;
@@ -23,12 +29,14 @@ height: 56px;
       text-decoration: none;
       color: #fff;
       }
-    }
+    
     .btn{
+
       padding: 15px 10px;
       font-size: 15px;
     }
+  
+
   }
-
-
+}
 }
