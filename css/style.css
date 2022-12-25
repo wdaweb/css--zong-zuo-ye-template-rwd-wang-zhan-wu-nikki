@@ -8,38 +8,51 @@ li {
   list-style: none;
 }
 
-@media (min-width: 992px) {
-  #nav {
-    background: #000;
-  }
-  .nav {
-    width: 90vw;
-    height: 56px;
-    margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .nav ul {
-    display: inline-block;
-    margin: 0px;
-    padding: 0px;
-  }
-  .nav ul img {
-    height: 40px;
-  }
-  .nav ul a {
-    text-decoration: none;
-    color: #fff;
-  }
-  .nav ul .btn {
-    padding: 15px 10px;
-    font-size: 15px;
-  }
+#nav {
+  background: #000;
+}
+
+nav {
+  width: 90vw;
+  height: 56px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+nav .barLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+nav .barLogo .fa-bars {
+  color: white;
+  font-size: 35px;
+  padding: 0 20px 0 0;
+}
+nav ul {
+  display: inline-block;
+  justify-self: start;
+  margin: 0px;
+  padding: 0px;
+}
+nav ul img {
+  height: 40px;
+}
+nav ul a {
+  text-decoration: none;
+  color: #fff;
+}
+nav ul .btn {
+  padding: 15px 10px;
+  font-size: 15px;
 }
