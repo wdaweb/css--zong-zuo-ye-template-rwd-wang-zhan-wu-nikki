@@ -1,3 +1,9 @@
+@charset "UTF-8";
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,10 +15,11 @@ li {
 }
 
 #nav {
-  background: #000;
+  background: #111;
 }
 
 nav {
+  position: sticky;
   width: 90vw;
   height: 56px;
   margin: auto;
@@ -26,18 +33,8 @@ nav {
       -ms-flex-align: center;
           align-items: center;
 }
-nav .barLogo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-nav .barLogo .fa-bars {
-  color: white;
-  font-size: 35px;
-  padding: 0 20px 0 0;
+nav .fa-bars {
+  display: none;
 }
 nav ul {
   display: inline-block;
@@ -46,13 +43,35 @@ nav ul {
   padding: 0px;
 }
 nav ul img {
-  height: 40px;
+  height: calc(2rem + 1.125vw);
 }
 nav ul a {
   text-decoration: none;
   color: #fff;
 }
-nav ul .btn {
+nav .btn li {
+  display: inline-block;
+  font-family: "微軟正黑體";
   padding: 15px 10px;
   font-size: 15px;
+}
+
+@media (max-width: 992px) {
+  #nav {
+    background: #959595;
+  }
+  .barLogo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .barLogo .fa-bars {
+    display: block;
+    color: white;
+    font-size: 35px;
+    padding: 0 20px 0 0;
+  }
 }

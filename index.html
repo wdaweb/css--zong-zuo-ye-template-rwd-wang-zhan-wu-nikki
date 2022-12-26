@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="en"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css' integrity='sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==' crossorigin='anonymous'/>
+<html lang="en">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'
+  integrity='sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=='
+  crossorigin='anonymous' />
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,48 +11,83 @@
   <title>Document</title>
   <link rel="stylesheet" href="./css/style.css">
 
-<!--  -->
+  <!-- aos的css -->
   <link rel="stylesheet" href="./aos/css/aos.css">
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.css' />
-
+  <!-- swiper的css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
 
 </head>
 <!-- 斷點1  992px -->
 <!-- 斷點2  768px -->
+
 <body>
   <!-- 992px會友漢堡 -->
   <div id="nav">
-  <nav >  
-    <ul class="barLogo">   
-<i class="fa-solid fa-bars" ></i>
-<!--點擊漢堡後出現箭頭與側邊欄 <i class="fa-solid fa-arrow-left"></i> -->
+    <nav>
+      <ul class="barLogo">
+        <i class="fa-solid fa-bars"></i>
+        <!--點擊漢堡後出現箭頭與側邊欄 <i class="fa-solid fa-arrow-left"></i> -->
 
-  <li><img src="./images/logo.png" ></li>
-</ul>
+        <li><img src="./images/logo.png"></li>
+      </ul>
 
-<ul >
-      <li class="btn"><a href="#">Home</a></li>
-      <li class="btn"><a href="#">About</a></li>
-      <li class="btn"><a href="#">Events</a></li>
-      <li class="btn"><a href="#">Gallery</a></li>
-      <li class="btn"><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-</div>
-
-
-</div>
+      <ul class="btn">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 
 
+  <!-- 輪播圖 -->
+  <!-- https://swiperjs.com/demos#slides-per-column -->
+  <div id="swiper">
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+
+          <img src="https://livedemo00.template-help.com/wt_54816/images/slider-01-2048x1000.jpg" alt="">
+        </div>
+        <div class="swiper-slide"><img
+            src="https://livedemo00.template-help.com/wt_54816/images/slider-03-2048x1000.jpg" alt=""></div>
+        <div class="swiper-slide"><img
+            src="https://livedemo00.template-help.com/wt_54816/images/slider-02-2048x1000.jpg" alt=""></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  </div>
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<!-- <script src="./aos/js/aos.js"></script>  -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- <script src="./aos/js/aos.js"></script>  -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+      }, navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 
 </body>
+
 </html>
