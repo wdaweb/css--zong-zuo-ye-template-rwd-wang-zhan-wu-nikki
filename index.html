@@ -23,21 +23,23 @@
 <body>
   <!-- 992px會友漢堡 -->
   <div id="nav">
-    <nav>
-      <ul class="barLogo">
-        <i class="fa-solid fa-bars"></i>
-        <!--點擊漢堡後出現箭頭與側邊欄 <i class="fa-solid fa-arrow-left"></i> -->
+    <nav class="nav-stuck">
+      <div>
+        <ul class="barLogo">
+          <i class="fa-solid fa-bars"></i>
+          <!--點擊漢堡後出現箭頭與側邊欄 <i class="fa-solid fa-arrow-left"></i> -->
 
-        <li><img src="./images/logo.png"></li>
-      </ul>
+          <li><img src="./images/logo.png"></li>
+        </ul>
 
-      <ul class="btn">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+        <ul class="btn">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
     </nav>
   </div>
 
@@ -49,11 +51,22 @@
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-
+          <div class="title" data-swiper-parallax="-300">BUTTER RELATIONSHIPS</div>
+          <div class="subtitle" data-swiper-parallax="-200">BETWEEN PEOPLE AND DOGS</div>
+          <div class="text" data-swiper-parallax="-100">
+            <p>
+              Our dog training center pursues the goal of better understanding the human’s best companions. We provide
+              group and private lessons for all breeds, from puppies to grown-ups. All our training programs are
+              designed to help your dog socialize and teach you how to train your dog.
+            </p>
+          </div>
+          <button class="nav-btn">READ MORE</button>
           <img src="https://livedemo00.template-help.com/wt_54816/images/slider-01-2048x1000.jpg" alt="">
         </div>
+        <!-- 2 -->
         <div class="swiper-slide"><img
             src="https://livedemo00.template-help.com/wt_54816/images/slider-03-2048x1000.jpg" alt=""></div>
+        <!-- 3 -->
         <div class="swiper-slide"><img
             src="https://livedemo00.template-help.com/wt_54816/images/slider-02-2048x1000.jpg" alt=""></div>
       </div>
