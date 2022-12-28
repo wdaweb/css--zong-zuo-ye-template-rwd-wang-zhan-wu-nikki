@@ -8,6 +8,9 @@
 li {
   list-style: none;
 }
+.container992 {
+  width: 992px;
+}
 #nav {
   width: 100%;
 }
@@ -21,7 +24,6 @@ nav {
   border-bottom: 1px solid #eee;
   div {
     margin: auto;
-    width: 80vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,13 +61,11 @@ nav {
     height: 100vh;
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-content: start;
     // flex-shrink: 0;
     flex-direction: column;
-    text-align: center;
     font-family: '微軟正黑體';
-
     color: #fff;
 
     // /* Center slide text vertically */
@@ -83,7 +83,7 @@ nav {
     // align-items: center;
   }
 
-  .swiper-slide img {
+  img {
     position: absolute;
     left: 0;
     top: 0;
@@ -94,26 +94,29 @@ nav {
     z-index: 1;
   }
 
-  .swiper-slide .title {
-    font-size: 41px;
-    font-weight: 700;
+  .swiper-title {
+    font-size: 50px;
+    font-weight: bolder;
+    z-index: 2;
+    padding-left: 40px;
+  }
+
+  .swiper-subtitle {
+    font-size: 40px;
+    padding: 10px 0px 10px 40px;
     z-index: 2;
   }
 
-  .swiper-slide .subtitle {
-    font-size: 21px;
-    padding: 10px 0px 10px 0px;
-    z-index: 2;
-  }
-
-  .swiper-slide .text {
-    font-size: 14px;
-    max-width: 400px;
+  .swiper-text {
+    font-size: 9px;
+    max-width: 500px;
     line-height: 1.3;
-    padding: 20px 0px 20px 0px;
+    white-space: normal;
+    padding: 10px 0px 20px 40px;
     z-index: 2;
   }
-  .nav-btn {
+  .swiper-btn {
+    width: 150px;
     font-size: 14px;
     font-weight: 700;
     color: #fff;
@@ -121,27 +124,39 @@ nav {
     padding: 1rem;
     background: transparent;
     z-index: 2;
+    margin-left: 40px;
   }
   //圓點
   .swiper-pagination {
     display: none;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #fff;
   }
 }
 
 //
 @media (max-width: 992px) {
   #nav {
+    z-index: 1080;
     background: #959595;
-  }
-  .barLogo {
-    display: flex;
-    align-items: center;
-    .fa-bars {
-      display: block;
-      color: white;
-      font-size: 35px;
-      padding: 0 20px 0 0;
+
+    .barLogo {
+      display: flex;
+      align-items: center;
+      padding-top: 5px;
+      .fa-bars {
+        display: block;
+        color: white;
+        font-size: 35px;
+        padding: 0 20px 0 20px;
+      }
     }
+  }
+
+  .btn {
+    display: none;
   }
 }
 

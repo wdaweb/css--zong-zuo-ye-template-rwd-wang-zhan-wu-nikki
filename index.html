@@ -24,7 +24,7 @@
   <!-- 992px會友漢堡 -->
   <div id="nav">
     <nav class="nav-stuck">
-      <div>
+      <div class="container992">
         <ul class="barLogo">
           <i class="fa-solid fa-bars"></i>
           <!--點擊漢堡後出現箭頭與側邊欄 <i class="fa-solid fa-arrow-left"></i> -->
@@ -49,18 +49,19 @@
   <div id="swiper">
     <!-- Swiper -->
     <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="title" data-swiper-parallax="-300">BUTTER RELATIONSHIPS</div>
-          <div class="subtitle" data-swiper-parallax="-200">BETWEEN PEOPLE AND DOGS</div>
-          <div class="text" data-swiper-parallax="-100">
+      <div class="swiper-wrapper ">
+
+        <div class="swiper-slide ">
+          <div class="swiper-word swiper-title" data-swiper-parallax="-300">BUTTER RELATIONSHIPS</div>
+          <div class="swiper-word swiper-subtitle" data-swiper-parallax="-200">BETWEEN PEOPLE AND DOGS</div>
+          <div class="swiper-word swiper-text" data-swiper-parallax="-100">
             <p>
               Our dog training center pursues the goal of better understanding the human’s best companions. We provide
               group and private lessons for all breeds, from puppies to grown-ups. All our training programs are
               designed to help your dog socialize and teach you how to train your dog.
             </p>
           </div>
-          <button class="nav-btn">READ MORE</button>
+          <button class="swiper-word swiper-btn">READ MORE</button>
           <img src="https://livedemo00.template-help.com/wt_54816/images/slider-01-2048x1000.jpg" alt="">
         </div>
         <!-- 2 -->
@@ -84,6 +85,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <!-- <script src="./aos/js/aos.js"></script>  -->
+  <script src="./gsap/gsap.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
@@ -99,6 +101,8 @@
         prevEl: ".swiper-button-prev",
       },
     });
+    //------------------------------
+    gsap.to('.swiper-word', { y: - 300, duration: 1 })
   </script>
 
 </body>
