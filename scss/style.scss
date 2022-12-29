@@ -1,4 +1,8 @@
-* {
+*,
+*::after,
+*::before {
+  list-style: none;
+  box-sizing: border-box;
   padding: 0px;
   margin: 0px;
 }
@@ -8,8 +12,8 @@
 li {
   list-style: none;
 }
-.container992 {
-  width: 992px;
+.container {
+  width: 1200px;
 }
 #nav {
   width: 100%;
@@ -139,6 +143,44 @@ nav {
   }
 }
 
+// 3格圖片內容區
+#section {
+  padding: 65px 0 80px;
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .services {
+    max-width: 370px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .services-title::before {
+    content: counter(services-title, decimal-leading-zero) '/';
+    counter-increment: services-title;
+    opacity: 2;
+    padding-right: 7px;
+  }
+  .services-btn {
+    margin: 10px 0px;
+    width: 150px;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(221, 221, 221);
+    padding: 1rem;
+    background: transparent;
+    z-index: 2;
+  }
+}
+
 //
 @media (max-width: 992px) {
   #nav {
@@ -189,7 +231,31 @@ nav {
       visibility: hidden;
     }
   }
+  // 3格圖片內容區
+  #section {
+    padding: 65px 0 80px;
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .row {
+      max-width: 720px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .col-sm-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    img {
+      display: inline-block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
 
 @media (max-width: 768px) {
+  // 3格圖片內容區
 }
