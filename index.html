@@ -8,6 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./css/style.css">
+  <!-- font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Audiowide&family=Indie+Flower&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- font-awesome -->
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'
     integrity='sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=='
     crossorigin='anonymous' />
@@ -48,13 +53,12 @@
     <!-- Swiper -->
     <div class="swiper mySwiper">
       <div class=" swiper-wrapper ">
-
         <div class=" swiper-slide  ">
           <div class="swiper-word swiper-title" data-swiper-parallax="-300">BUTTER RELATIONSHIPS</div>
           <div class="swiper-word swiper-subtitle" data-swiper-parallax="-200">BETWEEN PEOPLE AND DOGS</div>
           <div class="swiper-word swiper-text" data-swiper-parallax="-100">
             <p>
-              Our dog training center pursues the goal of better understanding the human’s best companions. We provide
+              Our dog training center pursues the goal of better understanding the human's best companions. We provide
               group and private lessons for all breeds, from puppies to grown-ups. All our training programs are
               designed to help your dog socialize and teach you how to train your dog.
             </p>
@@ -81,14 +85,14 @@
           <img src="https://livedemo00.template-help.com/wt_54816/images/slider-03-2048x1000.jpg" alt="">
         </div>
         <!-- 3 -->
-        <div class="swiper-slide">
+        <div class="swiper-slide ">
           <div class="swiper-word swiper-title" data-swiper-parallax="-300">Fix your dog's</div>
           <div class="swiper-word swiper-subtitle" data-swiper-parallax="-200">behavior problems</div>
           <div class="swiper-word swiper-text" data-swiper-parallax="-100">
             <p>
               If you need help with a specific behavioral issue, we can help too! Each program that we offer is
-              customized to your dog’s needs and catered to your family’s lifestyle. Our dog-friendly attitude allows
-              all owners to find a proper approach to their dogs’ behavioral education. We always remain open-minded to
+              customized to your dog's needs and catered to your family's lifestyle. Our dog-friendly attitude allows
+              all owners to find a proper approach to their dogs' behavioral education. We always remain open-minded to
               every training technique available.
             </p>
           </div>
@@ -126,8 +130,8 @@
                 alt=""></a>
           </div>
           <p class="services-text">
-            We’re going to change the way you communicate with your dog. To do this, we’ve designed every group class
-            with you and your dog in mind to achieve the best results for you and your dog.</p>
+            We're going to change the way you communicate with your dog. To do this, we've designed every group
+            class with you and your dog in mind to achieve the best results for you and your dog.</p>
           <button class="services-btn">READ MORE</button>
         </div>
       </div>
@@ -161,10 +165,10 @@
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
-      // autoplay: {
-      //   delay: 6000,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: ".swiper-pagination",
       }, navigation: {
@@ -172,8 +176,8 @@
         prevEl: ".swiper-button-prev",
       },
     });
+    gsap.to('.swiper-word', { y: - 300, duration: 1, repeat: -1, repeatDelay: 5.25 })
     //------------------------------
-    gsap.to('.swiper-word', { y: - 300, duration: 1 })
   </script>
 
 </body>

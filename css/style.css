@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -7,7 +6,7 @@
           box-sizing: border-box;
   padding: 0px;
   margin: 0px;
-  font-family: "微軟正黑體";
+  font-family: "Noto Sans TC";
 }
 
 a {
@@ -82,7 +81,6 @@ nav ul a {
 nav li {
   display: inline-block;
   font-weight: 700;
-  font-family: "微軟正黑體";
   padding: 15px 10px;
   font-size: 18px;
   text-transform: uppercase;
@@ -117,6 +115,8 @@ nav .btn li:hover {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 0%;
+     object-position: 0%;
   z-index: 0;
 }
 #swiper .swiper-word {
@@ -164,24 +164,41 @@ nav .btn li:hover {
   padding: 65px 0 80px;
 }
 #section .container {
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 #section .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  counter-reset: services-title;
 }
 #section .services {
-  max-width: 370px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.3333%;
+          flex: 0 0 33.3333%;
   margin-left: 15px;
   margin-right: 15px;
   margin-bottom: 30px;
+  height: 450px !important;
 }
 #section .services-photo {
   margin-top: 21px;
@@ -190,18 +207,27 @@ nav .btn li:hover {
 #section .services-title {
   text-transform: uppercase;
   font-size: calc(1rem + 0.7vw);
+  font-weight: 500;
 }
 #section .services-title a {
   color: #000;
+}
+#section .services-text {
+  text-overflow: ellipsis;
+  font-size: calc(0.8rem + 0.1vw);
+  white-space: normal;
+  word-break: break-word;
 }
 #section .services-title::before {
   content: counter(services-title, decimal-leading-zero) "/";
   counter-increment: services-title;
   opacity: 0.2;
   padding-right: 7px;
+  font-size: calc(1rem + 1.1vw);
 }
 #section .services-btn {
-  margin-top: 40px;
+  display: inline-block;
+  margin-top: calc(1.2rem + 0.1vw);
   width: 150px;
   font-size: 14px;
   font-weight: 500;
@@ -255,6 +281,8 @@ nav .btn li:hover {
     font-size: calc(1rem + 1vw);
   }
   #swiper .swiper-text {
+    padding-left: 10px;
+    padding-right: 10px;
     margin-left: auto;
     margin-right: auto;
     max-width: 500px;
@@ -302,6 +330,9 @@ nav .btn li:hover {
   }
 }
 @media (max-width: 768px) {
+  #swiper .swiper-text {
+    display: none;
+  }
   #section .row {
     display: -webkit-box;
     display: -ms-flexbox;
