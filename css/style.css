@@ -7,6 +7,11 @@
           box-sizing: border-box;
   padding: 0px;
   margin: 0px;
+  font-family: "微軟正黑體";
+}
+
+a {
+  text-decoration: none;
 }
 
 .flex {
@@ -19,10 +24,6 @@ li {
   list-style: none;
 }
 
-.container {
-  width: 1200px;
-}
-
 #nav {
   width: 100%;
 }
@@ -30,10 +31,11 @@ li {
 nav {
   z-index: 1080;
   position: fixed;
+  background: transparent;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 56px;
+  height: 60px;
   border-bottom: 1px solid #eee;
 }
 nav div {
@@ -48,8 +50,22 @@ nav div {
       -ms-flex-align: center;
           align-items: center;
 }
+nav .container {
+  max-width: 1200px;
+  padding-left: 10px;
+  padding-right: 15px;
+  height: 56px;
+}
 nav .fa-bars {
-  display: none;
+  visibility: hidden;
+}
+nav .barLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 nav ul {
   display: inline-block;
@@ -61,16 +77,18 @@ nav ul img {
   height: calc(2rem + 1.125vw);
 }
 nav ul a {
-  text-decoration: none;
   color: #fff;
 }
-nav .btn li {
+nav li {
   display: inline-block;
   font-weight: 700;
   font-family: "微軟正黑體";
   padding: 15px 10px;
   font-size: 18px;
   text-transform: uppercase;
+}
+nav .btn li:hover {
+  background: rgba(255, 255, 255, 0.7);
 }
 
 #swiper .swiper-slide {
@@ -88,7 +106,6 @@ nav .btn li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: "微軟正黑體";
   color: #fff;
 }
 #swiper img {
@@ -103,7 +120,7 @@ nav .btn li {
   z-index: 0;
 }
 #swiper .swiper-word {
-  margin-left: calc(0rem + 25vw);
+  margin-left: calc(0rem + 20vw);
 }
 #swiper .swiper-title {
   font-size: 50px;
@@ -156,23 +173,38 @@ nav .btn li {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 #section .services {
   max-width: 370px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+}
+#section .services-photo {
+  margin-top: 21px;
+  margin-bottom: 15px;
+}
+#section .services-title {
+  text-transform: uppercase;
+  font-size: calc(1rem + 0.7vw);
+}
+#section .services-title a {
+  color: #000;
 }
 #section .services-title::before {
   content: counter(services-title, decimal-leading-zero) "/";
   counter-increment: services-title;
-  opacity: 2;
+  opacity: 0.2;
   padding-right: 7px;
 }
 #section .services-btn {
-  margin: 10px 0px;
+  margin-top: 40px;
   width: 150px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 500;
   color: rgb(0, 0, 0);
   border: 2px solid rgb(221, 221, 221);
   padding: 1rem;
@@ -183,6 +215,8 @@ nav .btn li {
 @media (max-width: 992px) {
   #nav {
     z-index: 1080;
+  }
+  #nav nav {
     background: #959595;
   }
   #nav .barLogo {
@@ -195,7 +229,7 @@ nav .btn li {
     padding-top: 5px;
   }
   #nav .barLogo .fa-bars {
-    display: block;
+    visibility: visible;
     color: white;
     font-size: 35px;
     padding: 0 20px 0 20px;
@@ -209,15 +243,25 @@ nav .btn li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    text-align: center;
   }
   #swiper .swiper-word {
-    margin-left: calc(0rem + 2vw);
+    margin-left: 0px;
   }
   #swiper .swiper-title {
     font-size: calc(2rem + 2vw);
   }
   #swiper .swiper-subtitle {
     font-size: calc(1rem + 1vw);
+  }
+  #swiper .swiper-text {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+  }
+  #swiper .swiper-btn {
+    margin-left: auto;
+    margin-right: auto;
   }
   #swiper .swiper-pagination {
     visibility: visible;
@@ -241,12 +285,43 @@ nav .btn li {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
   #section .col-sm-6 {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
     max-width: 50%;
+  }
+  #section img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  #section .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #section .col-12 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
+  #section .services {
+    margin-left: auto;
+    margin-right: auto;
   }
   #section img {
     display: inline-block;

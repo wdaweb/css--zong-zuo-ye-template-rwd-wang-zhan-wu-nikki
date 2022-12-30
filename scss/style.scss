@@ -5,6 +5,10 @@
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
+  font-family: '微軟正黑體';
+}
+a {
+  text-decoration: none;
 }
 .flex {
   display: flex;
@@ -12,19 +16,18 @@
 li {
   list-style: none;
 }
-.container {
-  width: 1200px;
-}
+
 #nav {
   width: 100%;
 }
 nav {
   z-index: 1080;
   position: fixed;
+  background: transparent;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 56px;
+  height: 60px;
   border-bottom: 1px solid #eee;
   div {
     margin: auto;
@@ -32,9 +35,18 @@ nav {
     justify-content: space-between;
     align-items: center;
   }
-
+  .container {
+    max-width: 1200px;
+    padding-left: 10px;
+    padding-right: 15px;
+    height: 56px;
+  }
   .fa-bars {
-    display: none;
+    visibility: hidden;
+  }
+  .barLogo {
+    display: flex;
+    align-items: center;
   }
   ul {
     display: inline-block;
@@ -46,17 +58,20 @@ nav {
       height: calc(2rem + 1.125vw);
     }
     a {
-      text-decoration: none;
       color: #fff;
     }
   }
-  .btn li {
+
+  li {
     display: inline-block;
     font-weight: 700;
     font-family: '微軟正黑體';
     padding: 15px 10px;
     font-size: 18px;
     text-transform: uppercase;
+  }
+  .btn li:hover {
+    background: rgba(255, 255, 255, 0.7);
   }
 }
 // 輪播
@@ -69,7 +84,7 @@ nav {
     align-content: start;
     // flex-shrink: 0;
     flex-direction: column;
-    font-family: '微軟正黑體';
+
     color: #fff;
 
     // /* Center slide text vertically */
@@ -98,7 +113,7 @@ nav {
     z-index: 0;
   }
   .swiper-word {
-    margin-left: calc(0rem + 25vw);
+    margin-left: calc(0rem + 20vw);
   }
 
   .swiper-title {
@@ -146,6 +161,7 @@ nav {
 // 3格圖片內容區
 #section {
   padding: 65px 0 80px;
+
   .container {
     margin-left: auto;
     margin-right: auto;
@@ -154,25 +170,38 @@ nav {
   .row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .services {
     max-width: 370px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
   }
+  .services-photo {
+    margin-top: 21px;
+    margin-bottom: 15px;
+  }
+  .services-title {
+    text-transform: uppercase;
+    font-size: calc(1rem + 0.7vw);
 
+    a {
+      color: #000;
+    }
+  }
   .services-title::before {
     content: counter(services-title, decimal-leading-zero) '/';
     counter-increment: services-title;
-    opacity: 2;
+    opacity: 0.2;
     padding-right: 7px;
   }
   .services-btn {
-    margin: 10px 0px;
+    margin-top: 40px;
     width: 150px;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 500;
     color: rgb(0, 0, 0);
     border: 2px solid rgb(221, 221, 221);
     padding: 1rem;
@@ -185,14 +214,16 @@ nav {
 @media (max-width: 992px) {
   #nav {
     z-index: 1080;
-    background: #959595;
+    nav {
+      background: #959595;
+    }
 
     .barLogo {
       display: flex;
       align-items: center;
       padding-top: 5px;
       .fa-bars {
-        display: block;
+        visibility: visible;
         color: white;
         font-size: 35px;
         padding: 0 20px 0 20px;
@@ -209,9 +240,10 @@ nav {
       height: 100vh;
       position: relative;
       display: flex;
+      text-align: center;
     }
     .swiper-word {
-      margin-left: calc(0rem + 2vw);
+      margin-left: 0px;
     }
     .swiper-title {
       font-size: calc(2rem + 2vw);
@@ -219,6 +251,15 @@ nav {
 
     .swiper-subtitle {
       font-size: calc(1rem + 1vw);
+    }
+    .swiper-text {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 500px;
+    }
+    .swiper-btn {
+      margin-left: auto;
+      margin-right: auto;
     }
     //圓點
     .swiper-pagination {
@@ -243,6 +284,7 @@ nav {
       max-width: 720px;
       display: flex;
       flex-wrap: wrap;
+      justify-content: start;
     }
     .col-sm-6 {
       flex: 0 0 50%;
@@ -258,4 +300,24 @@ nav {
 
 @media (max-width: 768px) {
   // 3格圖片內容區
+  #section {
+    .row {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    .col-12 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .services {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    img {
+      display: inline-block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
