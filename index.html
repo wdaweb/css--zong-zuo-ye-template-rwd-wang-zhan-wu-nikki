@@ -63,7 +63,7 @@
               designed to help your dog socialize and teach you how to train your dog.
             </p>
           </div>
-          <button class="swiper-word swiper-btn">READ MORE</button>
+          <a href="#" class="swiper-word swiper-btn">READ MORE</a>
 
           <img src="https://livedemo00.template-help.com/wt_54816/images/slider-01-2048x1000.jpg" alt="">
         </div>
@@ -80,7 +80,7 @@
               Center!
             </p>
           </div>
-          <button class="swiper-word swiper-btn">READ MORE</button>
+          <a href="#" class="swiper-word swiper-btn">READ MORE</a>
 
           <img src="https://livedemo00.template-help.com/wt_54816/images/slider-03-2048x1000.jpg" alt="">
         </div>
@@ -96,7 +96,7 @@
               every training technique available.
             </p>
           </div>
-          <button class="swiper-word swiper-btn">READ MORE</button>
+          <a href="#" class="swiper-word swiper-btn">READ MORE</a>
           <img src="https://livedemo00.template-help.com/wt_54816/images/slider-02-2048x1000.jpg" alt="">
         </div>
       </div>
@@ -109,7 +109,7 @@
   <!-- 3格圖片內容區 -->
   <section id="section">
     <div class=" container row">
-      <div class="col-lg-4 col-sm-6 col-12">
+      <div class="services1 col-lg-4 col-sm-6 col-12">
         <article class=" services ">
           <h3 class="services-title"><a href="#">personal Training</a></h3>
           <div class="services-photo">
@@ -122,7 +122,7 @@
         </article>
       </div>
       <!-- 2 -->
-      <div class="col-lg-4 col-sm-6 col-12">
+      <div class=" services2 col-lg-4 col-sm-6 col-12">
         <div class=" services ">
           <h3 class="services-title"><a href="#">Group Training</a></h3>
           <div class="services-photo">
@@ -136,7 +136,7 @@
         </div>
       </div>
       <!-- 3 -->
-      <div class="col-lg-4 col-sm-6 col-12">
+      <div class=" services3 col-lg-4 col-sm-6 col-12">
         <div class=" services ">
           <h3 class="services-title"><a href="#">Board & Train</a></h3>
           <div class="services-photo">
@@ -164,7 +164,7 @@
 
   <!-- Initialize Swiper -->
   <script>
-    var swiper = new Swiper(".mySwiper", {
+    const swiper = new Swiper(".mySwiper", {
       autoplay: {
         delay: 6000,
         disableOnInteraction: false,
@@ -177,7 +177,10 @@
       },
     });
     gsap.to('.swiper-word', { y: - 300, duration: 1, repeat: -1, repeatDelay: 5.25 })
-    //------------------------------
+    //----3格圖片--------------------------
+    gsap.fromTo('.services1', { x: -500 }, { x: 0, duration: 1 })
+    gsap.fromTo('.services2', { y: 500 }, { y: 0, duration: 1 })
+    gsap.fromTo('.services3', { x: 500 }, { x: 0, duration: 1 })
   </script>
 
 </body>
