@@ -422,14 +422,14 @@
 
     $('.fa-bars').on('click', function () {
       $('.btn').css("display", "inline-block")
-      $('.fa-bars').addClass("close")
-      $('.fa-arrow-left').addClass("open")
+      $('.fa-bars').css("display", "none")
+      $('.fa-arrow-left').css("display", "block")
     })
 
     $('.fa-arrow-left').on('click', function () {
       $('.btn').css("display", "none")
-      $('.fa-arrow-left').removeClass("open")
-      $('.fa-bars').removeClass("close")
+      $('.fa-arrow-left').css("display", "none")
+      $('.fa-bars').css("display", "block")
     })
 
     gsap.registerPlugin(ScrollTrigger)

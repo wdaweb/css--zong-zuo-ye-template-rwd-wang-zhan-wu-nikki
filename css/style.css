@@ -6,7 +6,7 @@
           box-sizing: border-box;
   padding: 0px;
   margin: 0px;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", "Font Awesome 6 Free";
 }
 
 a {
@@ -479,6 +479,10 @@ nav .btn li:hover {
   font-size: 14px;
   font-weight: 400;
   color: #777;
+}
+#link i {
+  color: #777;
+  padding-right: 6px;
 }
 
 #map iframe {
