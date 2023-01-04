@@ -7,15 +7,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
   <link rel="stylesheet" href="./css/style.css">
   <!-- font -->
   <link
     href="https://fonts.googleapis.com/css2?family=Audiowide&family=Indie+Flower&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet">
-  <!-- font-awesome -->
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'
-    integrity='sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=='
-    crossorigin='anonymous' />
+
+
   <!-- aos的css -->
   <link rel="stylesheet" href="./aos/css/aos.css">
   <!-- swiper的css -->
@@ -31,7 +33,9 @@
     <nav class="nav-stuck">
       <div class="container">
         <ul class="barLogo">
-          <i class="fa-solid fa-bars"></i>
+          <a href="#">
+            <i class="fa-solid fa-bars"></i>
+          </a>
           <li><img src="./images/logo.png"></li>
         </ul>
 
@@ -331,20 +335,96 @@
     </div>
   </div>
 
+  <!-- link -->
+  <div id="link">
+    <div class="row">
+
+      <div class="col-lg-2">
+        <h5>about</h5>
+        <a href="#">Who we are</a>
+        <a href="#">Our history</a>
+        <a href="#">What We do</a>
+        <a href="#">Our programs</a>
+        <a href="#">Our Team</a>
+        <a href="#">news</a>
+        <a href="#">Training tips</a>
+      </div>
+
+      <div class="col-lg-2">
+        <h5>Services</h5>
+        <a href="#">private Training</a>
+        <a href="#">Group training</a>
+        <a href="#">Workshops</a>
+        <a href="#">Seminars</a>
+        <a href="#">dog Boarding</a>
+        <a href="#">pet Care</a>
+
+      </div>
+
+      <div class="col-lg-2">
+        <h5>Quick Links</h5>
+        <a href="#">Events</a>
+        <a href="#">Tips</a>
+        <a href="#">Schedule</a>
+        <a href="#">Resources</a>
+        <a href="#">FAQ</a>
+        <a href="#">Get in touch</a>
+      </div>
+
+      <div class="col-lg-3">
+        <h5>Contacts</h5>
+        <ul>
+          <li><i class="fa-solid fa-phone"></i><a href="#">123-4567-8922</a></li>
+          <li><i class="fa-solid fa-house"></i><a href="#">汪星國汪汪市汪汪路</a></li>
+          <li><i class="fa-regular fa-clock"></i><a href="#">9am-6pm PST M-Th; 9am-3pm PST Fri</a></li>
+          <li><i class="fa-regular fa-envelope"></i><a href="#">E-mail: info@demolink.org</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3">
+        <h5>Facebook</h5>
+
+      </div>
+
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <!-- <script src="./aos/js/aos.js"></script>  -->
-  <script src="./gsap/gsap.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js'></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./gsap/gsap.js"></script>
+  <!-- gsap plugins 需在gsap主程式之後 -->
+  <script src="./gsap/ScrollTrigger.js"></script>
   <script>
     AOS.init();
   </script>
+  <!-- nav -->
+  <script>
+    gsap.registerPlugin(ScrollTrigger)
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: 'nav',
+        start: 'center 0%',
+        end: 'center 20%',
+        scrub: 1,
+        // markers: true
+      }
+    })
+    tl
+      .to('nav', {
+        backgroundColor: '#777',
+      })
+  </script>
+
+
 
   <!-- Initialize Swiper -->
   <script>
     const swiper = new Swiper(".mySwiper", {
       autoplay: {
-        delay: 6000,
+        delay: 5850,
         disableOnInteraction: false,
       },
       pagination: {
