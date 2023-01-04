@@ -17,7 +17,12 @@ a {
 li {
   list-style: none;
 }
-
+.open {
+  display: block;
+}
+.close {
+  display: none;
+}
 #nav {
   width: 100%;
   z-index: 1080;
@@ -45,8 +50,10 @@ nav {
     padding-right: 15px;
     height: 80px;
   }
-  .fa-bars {
-    visibility: hidden;
+
+  .fa-bars,
+  .fa-arrow-left {
+    display: none;
   }
   .barLogo {
     display: flex;
@@ -383,15 +390,49 @@ nav {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding: 65px 0 80px;
+  padding: 0px 0 80px;
+  text-transform: uppercase;
+  .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   .col-lg-2 {
     flex: 0 0 16.66666%;
     max-width: 16.66666%;
+    justify-content: center;
   }
   .col-lg-3 {
     flex: 0 0 25%;
     max-width: 25%;
   }
+  h5 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  li {
+    line-height: 2;
+  }
+  a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #777;
+  }
+}
+#map {
+  iframe {
+    width: 100%;
+    height: 450px;
+  }
+}
+
+.copyright {
+  line-height: 4;
+  text-align: center;
+  color: #777;
+  font-size: 18px;
 }
 
 //
@@ -402,9 +443,11 @@ nav {
       background: #959595;
       height: 56px;
       border-bottom: none;
+      position: relative;
     }
     .container {
       height: 56px;
+      padding: 0px;
     }
 
     .barLogo {
@@ -412,21 +455,44 @@ nav {
       align-items: center;
       padding-top: 5px;
       .fa-bars {
-        visibility: visible;
+        display: block;
         color: white;
         font-size: 35px;
         padding: 0 20px 0 20px;
       }
-
+      .fa-arrow-left {
+        display: none;
+        color: white;
+        font-size: 35px;
+        padding: 0 20px 0 20px;
+      }
       li {
         padding: 0;
       }
     }
+    .btn {
+      padding-top: 56px;
+      width: 270px;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      display: none;
+
+      a {
+        color: #777;
+      }
+      li {
+        width: 100%;
+
+        background-color: #fff;
+      }
+      li:hover {
+        background: rgba(255, 255, 255, 0.6);
+      }
+    }
   }
 
-  .btn {
-    display: none;
-  }
   // 輪播
   #swiper {
     .swiper-slide {
@@ -521,6 +587,25 @@ nav {
       max-width: 50%;
     }
   }
+
+  #link {
+    max-width: 720px;
+
+    .col-sm-4 {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+      margin-bottom: 40px;
+    }
+    .col-sm-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  #map {
+    iframe {
+      height: 250px;
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -565,6 +650,7 @@ nav {
 
   // 清單圖片
   #photoNews {
+    padding: 0px 0 40px;
     .text {
       transform: translateY(0%);
       transition: transform 0.5s;
@@ -572,6 +658,26 @@ nav {
     .col-12 {
       flex: 0 0 100%;
       max-width: 100%;
+    }
+  }
+  #link {
+    max-width: 90vw;
+    padding: 0px 0 40px;
+    .row {
+      flex-wrap: wrap;
+      justify-content: start;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .col-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin-bottom: 40px;
+    }
+    .col-12 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 40px;
     }
   }
 }

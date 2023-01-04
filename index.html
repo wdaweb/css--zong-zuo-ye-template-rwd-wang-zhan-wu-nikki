@@ -7,11 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
-
+  <!-- 自己的 -->
   <link rel="stylesheet" href="./css/style.css">
+  <!-- fontAwesome -->
+  <link rel="stylesheet" href="./css/all.css">
+
   <!-- font -->
   <link
     href="https://fonts.googleapis.com/css2?family=Audiowide&family=Indie+Flower&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
@@ -34,12 +34,14 @@
       <div class="container">
         <ul class="barLogo">
           <a href="#">
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-sharp fa-solid fa-bars"></i>
+
           </a>
           <li><img src="./images/logo.png"></li>
         </ul>
 
-        <ul class="btn">
+        <ul id="nav-btn" class="btn">
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Events</a></li>
@@ -328,10 +330,6 @@
             be doing is actually putting them in danger. Yearly thousands of dogs lose their lives in...</p>
         </div>
       </div>
-
-
-
-
     </div>
   </div>
 
@@ -339,39 +337,44 @@
   <div id="link">
     <div class="row">
 
-      <div class="col-lg-2">
+      <div class="col-lg-2 link-item col-sm-4 col-6">
         <h5>about</h5>
-        <a href="#">Who we are</a>
-        <a href="#">Our history</a>
-        <a href="#">What We do</a>
-        <a href="#">Our programs</a>
-        <a href="#">Our Team</a>
-        <a href="#">news</a>
-        <a href="#">Training tips</a>
+        <ul>
+          <li> <a href="#">Who we are</a></li>
+          <li> <a href="#">Our history</a></li>
+          <li> <a href="#">What We do</a></li>
+          <li> <a href="#">Our programs</a></li>
+          <li> <a href="#">Our Team</a></li>
+          <li> <a href="#">news</a></li>
+          <li> <a href="#">Training tips</a></li>
+        </ul>
       </div>
 
-      <div class="col-lg-2">
+      <div class="col-lg-2 link-item col-sm-4 col-6">
         <h5>Services</h5>
-        <a href="#">private Training</a>
-        <a href="#">Group training</a>
-        <a href="#">Workshops</a>
-        <a href="#">Seminars</a>
-        <a href="#">dog Boarding</a>
-        <a href="#">pet Care</a>
-
+        <ul>
+          <li> <a href="#">private Training</a></li>
+          <li> <a href="#">Group training</a></li>
+          <li><a href="#">Workshops</a></li>
+          <li> <a href="#">Seminars</a></li>
+          <li><a href="#">dog Boarding</a></li>
+          <li> <a href="#">pet Care</a></li>
+        </ul>
       </div>
 
-      <div class="col-lg-2">
+      <div class="col-lg-2 link-item col-sm-4 col-6">
         <h5>Quick Links</h5>
-        <a href="#">Events</a>
-        <a href="#">Tips</a>
-        <a href="#">Schedule</a>
-        <a href="#">Resources</a>
-        <a href="#">FAQ</a>
-        <a href="#">Get in touch</a>
+        <ul>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Tips</a></li>
+          <li><a href="#">Schedule</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li> <a href="#">Get in touch</a></li>
+        </ul>
       </div>
 
-      <div class="col-lg-3">
+      <div class="col-lg-3 link-item col-sm-6 col-12">
         <h5>Contacts</h5>
         <ul>
           <li><i class="fa-solid fa-phone"></i><a href="#">123-4567-8922</a></li>
@@ -381,13 +384,28 @@
         </ul>
       </div>
 
-      <div class="col-lg-3">
+      <div class="col-lg-3 link-item col-sm-6 col-12">
         <h5>Facebook</h5>
-
+        <iframe name="f277277d902cb14" width="1000px" height="1000px" data-testid="fb:page Facebook Social Plugin"
+          title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true"
+          scrolling="no" allow="encrypted-media"
+          src="https://www.facebook.com/v2.5/plugins/page.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Dfde146e56d1ab4%26domain%3Dlivedemo00.template-help.com%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Flivedemo00.template-help.com%252Ff612514cda69b8%26relation%3Dparent.parent&amp;container_width=270&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Ftemplatemonster&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false"
+          style="border: none; visibility: visible; width: 270px; height: 130px;" class=""></iframe>
       </div>
 
     </div>
   </div>
+
+  <!-- map -->
+  <div id="map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14458.814597305804!2d121.4195156!3d25.0441293!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa639904a89f26435!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5YyX5Z-65a6c6Iqx6YeR6aas5YiG572y5rOw5bGx6IG35qWt6KiT57e05aC0!5e0!3m2!1szh-TW!2stw!4v1672835746798!5m2!1szh-TW!2stw"
+      width="100%" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <!-- copyright -->
+  <div class="copyright">泰山職訓切版 &copy; 51*</div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <!-- <script src="./aos/js/aos.js"></script>  -->
@@ -401,6 +419,19 @@
   </script>
   <!-- nav -->
   <script>
+
+    $('.fa-bars').on('click', function () {
+      $('.btn').css("display", "inline-block")
+      $('.fa-bars').addClass("close")
+      $('.fa-arrow-left').addClass("open")
+    })
+
+    $('.fa-arrow-left').on('click', function () {
+      $('.btn').css("display", "none")
+      $('.fa-arrow-left').removeClass("open")
+      $('.fa-bars').removeClass("close")
+    })
+
     gsap.registerPlugin(ScrollTrigger)
 
     const tl = gsap.timeline({
@@ -416,12 +447,9 @@
       .to('nav', {
         backgroundColor: '#777',
       })
-  </script>
 
+    // <!-- Initialize Swiper -->
 
-
-  <!-- Initialize Swiper -->
-  <script>
     const swiper = new Swiper(".mySwiper", {
       autoplay: {
         delay: 5850,
@@ -440,9 +468,31 @@
     gsap.fromTo('.services2', { y: 500 }, { y: 0, duration: 1 })
     gsap.fromTo('.services3', { x: 500 }, { x: 0, duration: 1 })
 
-// -----清單圖片------------------------- 
+    // -----清單圖片------------------------- 
 
+    // -----link------------------------- 
+    const link_tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#photoNews',
+        // 設定一開始就要觸發scrollTrigger
+        start: '60% 25%',
+        end: 'bottom center',
+        // // play、 pause(暫停)、 resume(恢復)、 reverse(反向)、 restart(重新開始)、 reset(重置)、complete、 none
+        toggleActions: 'play none none restart',
+        // markers: true
+      }
 
+    })
+
+    link_tl
+      .from('#link', {
+        y: 200,
+        // duration: 5
+      })
+      .from('.link-item', {
+        y: 500,
+        stagger: 0.2
+      })
 
   </script>
 
