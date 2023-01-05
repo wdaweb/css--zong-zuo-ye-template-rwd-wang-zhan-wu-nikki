@@ -36,12 +36,11 @@
           <a href="#">
             <i class="fa-solid fa-arrow-left"></i>
             <i class="fa-sharp fa-solid fa-bars"></i>
-
           </a>
           <li><img src="./images/logo.png"></li>
         </ul>
 
-        <ul id="nav-btn" class="btn">
+        <ul id="nav-btn" tabindex="0" class="btn">
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Events</a></li>
@@ -419,18 +418,17 @@
   </script>
   <!-- nav -->
   <script>
-
+    let count = 0
     $('.fa-bars').on('click', function () {
-      $('.btn').css("display", "inline-block")
-      $('.fa-bars').css("display", "none")
-      $('.fa-arrow-left').css("display", "block")
+      count++
+      // console.log(count);
+      if (count % 2 == 0) { $('.btn').css("display", "none") } else {
+        $('.btn').css("display", "inline-block")
+      }
     })
 
-    $('.fa-arrow-left').on('click', function () {
-      $('.btn').css("display", "none")
-      $('.fa-arrow-left').css("display", "none")
-      $('.fa-bars').css("display", "block")
-    })
+
+
 
     gsap.registerPlugin(ScrollTrigger)
 
@@ -468,6 +466,34 @@
     gsap.fromTo('.services2', { y: 500 }, { y: 0, duration: 1 })
     gsap.fromTo('.services3', { x: 500 }, { x: 0, duration: 1 })
 
+
+
+    // -----文字內容------------------------- 
+
+    gsap.fromTo('#photoNews .news', {
+      // scrollTriger: {
+      //   trigger: '#photoNews',
+      //   markers: true
+      // },
+
+      rotationY: 0,
+
+    },
+      {
+        scrollTriger: {
+          trigger: '#photoNews',
+          markers: true
+        },
+
+        stagger: 1,
+        rotationY: -360,
+        duration: 4,
+        ease: 'elastic'
+      })
+
+
+
+
     // -----清單圖片------------------------- 
 
     // -----link------------------------- 
@@ -491,7 +517,10 @@
       })
       .from('.link-item', {
         y: 500,
-        stagger: 0.2
+        stagger: {
+          each: 1,
+          from: 'random'
+        }
       })
 
   </script>

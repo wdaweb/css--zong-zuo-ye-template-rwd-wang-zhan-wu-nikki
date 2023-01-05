@@ -24,17 +24,10 @@ li {
   list-style: none;
 }
 
-.open {
-  display: block;
-}
-
-.close {
-  display: none;
-}
-
 #nav {
   width: 100%;
   z-index: 1080;
+  overflow-x: hidden;
 }
 
 nav {
@@ -401,10 +394,10 @@ nav .btn li:hover {
           align-items: center;
   -webkit-transform: translateY(15%);
           transform: translateY(15%);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 #photoNews .text p {
   display: none;
@@ -441,6 +434,7 @@ nav .btn li:hover {
   margin-right: auto;
   padding: 0px 0 80px;
   text-transform: uppercase;
+  overflow: hidden;
 }
 #link .row {
   display: -webkit-box;
@@ -511,6 +505,29 @@ nav .btn li:hover {
     height: 56px;
     padding: 0px;
   }
+  #nav .btn {
+    max-width: 300px;
+    max-height: 100vh;
+    position: fixed;
+    z-index: 100;
+    top: 56px;
+    bottom: 0;
+    display: none;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    -webkit-transition-duration: 0.8s;
+            transition-duration: 0.8s;
+  }
+  #nav .btn a {
+    color: #777;
+  }
+  #nav .btn li {
+    width: 100%;
+    background-color: #fff;
+  }
+  #nav .btn li:hover {
+    background: rgba(255, 255, 255, 0.6);
+  }
   #nav .barLogo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -525,34 +542,10 @@ nav .btn li:hover {
     color: white;
     font-size: 35px;
     padding: 0 20px 0 20px;
-  }
-  #nav .barLogo .fa-arrow-left {
-    display: none;
-    color: white;
-    font-size: 35px;
-    padding: 0 20px 0 20px;
+    cursor: pointer;
   }
   #nav .barLogo li {
     padding: 0;
-  }
-  #nav .btn {
-    padding-top: 56px;
-    width: 270px;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    display: none;
-  }
-  #nav .btn a {
-    color: #777;
-  }
-  #nav .btn li {
-    width: 100%;
-    background-color: #fff;
-  }
-  #nav .btn li:hover {
-    background: rgba(255, 255, 255, 0.6);
   }
   #swiper .swiper-slide {
     height: 100vh;
